@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import Form from '../Form';
 import ContactList from '../ContactList';
 import Filter from '../Filter';
+import shortid from 'shortid';
 
 import style from './Phonebook.module.css';
 
@@ -19,6 +20,7 @@ class Phonebook extends Component {
 
   addContact = (name, number) => {
     const newContact = {
+      id: shortid.generate(),
       name,
       number,
     };
